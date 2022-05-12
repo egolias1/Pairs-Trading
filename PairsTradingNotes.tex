@@ -9,7 +9,7 @@
 
 
 
-\title{\boldmath Time Series Analysis Basics}
+\title{\boldmath Notes on Pairs Trading}
 
 
 %% %simple case: 2 authors, same institution
@@ -39,7 +39,7 @@
 
 
 
-\abstract{Abstract...}
+%\abstract{Abstract...}
 
 
 
@@ -47,50 +47,11 @@
 \maketitle
 \flushbottom
 
-\section{Some examples and best-practices}
+\section{Introduction}
 \label{sec:intro}
 
-For internal references use label-refs: see section~\ref{sec:intro}.
-Bibliographic citations can be done with cite: refs.~\cite{a,b,c}.
-When possible, align equations on the equal sign. The package
-\texttt{amsmath} is already loaded. See \eqref{eq:x}.
-\begin{equation}
-\label{eq:x}
-\begin{split}
-x &= 1 \,,
-\qquad
-y = 2 \,,
-\\
-z &= 3 \,.
-\end{split}
-\end{equation}
-Also, watch out for the punctuation at the end of the equations.
-
-
-If you want some equations without the tag (number), please use the available
-starred-environments. For example:
-\begin{equation*}
-x = 1
-\end{equation*}
-
-The amsmath package has many features. For example, you can use use
-\texttt{subequations} environment:
-\begin{subequations}\label{eq:y}
-\begin{align}
-\label{eq:y:1}
-a & = 1
-\\
-\label{eq:y:2}
-b & = 2
-\end{align}
-and it will continue to operate across the text also.
-\begin{equation}
-\label{eq:y:3}
-c = 3
-\end{equation}
-\end{subequations}
-The references will work as you'd expect: \eqref{eq:y:1},
-\eqref{eq:y:2} and \eqref{eq:y:3} are all part of \eqref{eq:y}.
+A basic pairs trading strategy consists of exploiting an out-of-equilibrium market; if two assets typically trade at some spread, then the narrowing/widening of the spread between the assets may be exploited for profit
+For example, if the spread widens, then one should buy the low asset and short the high asset. On the other hand, if the spread narrows, than one should short the higher asset and buy the lower asset. 
 
 A similar solution is available for figures via the \texttt{subfigure}
 package (not loaded by default and not shown here). 
@@ -98,7 +59,7 @@ All figures and tables should be referenced in the text and should be
 placed at the top of the page where they are first cited or in
 subsequent pages. Positioning them in the source file
 after the paragraph where you first reference them usually yield good
-results. See figure~\ref{fig:i} and table~\ref{tab:i}.
+results. See figur
 
 \begin{figure}[tbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
