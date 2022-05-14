@@ -18,7 +18,7 @@
 %% \affiliation{Institution,\\Address, Country}
 
 % more complex case: 4 authors, 3 institutions, 2 footnotes
-\author[a,b,1]{Elliot Golias,\note{Corresponding author.}}
+\author{Elliot Golias,\note{Corresponding author.}}
 %\author[c]{S. Econd,}
 %\author[a,2]{T. Hird\note{Also at Some University.}}
 %\author[a,2]{and Fourth}
@@ -53,14 +53,30 @@
 A basic pairs trading strategy consists of exploiting an out-of-equilibrium market; if two assets typically trade at some spread, then the narrowing/widening of the spread between the assets may be exploited for profit
 For example, if the spread widens, then one should buy the low asset and short the high asset. On the other hand, if the spread narrows, than one should short the higher asset and buy the lower asset. 
 
-A similar solution is available for figures via the \texttt{subfigure}
-package (not loaded by default and not shown here). 
-All figures and tables should be referenced in the text and should be
-placed at the top of the page where they are first cited or in
-subsequent pages. Positioning them in the source file
-after the paragraph where you first reference them usually yield good
-results. See figur
-
+Consider a state process $\{x_k\}$, where $x_k$ denotes the value of a real variable at the time $t_k = k \tau$, where $\tau$ is the separation between times and $k=0, 1, 2, \dots$. We assume that $\{ x_k \}$ is mean-reverting, meaning we have the following relation between the spread of susequent pairs of $x_k$:
+%
+\begin{align}
+	x_{k+1} - x_k = (a-b x_k) \tau + \sigma \sqrt{\tau} \varepsilon_{k+1},
+\end{align}
+%
+where $\sigma \geq 0, b > 0, a \in \mathbf{R}$, and $\{ \varepsilon_k \}$ is iid Gaussian $\mathcal{N}(0, 1)$ and independent of ${x_k}$. With this definition, the process reverts to $\mu = a/b$ with \textit{strength} $b$. This implies that
+%
+\begin{align}
+	x_k \sim \mathcal{N}(\mu_k, \sigma_k^2),
+\end{align}
+%
+where
+%
+\begin{align}
+	\mu_k = \frac{a}{b} +\left[\mu_0 - \frac{a}{b} \right](1 - b \tau)^k,
+\end{align}
+%
+and
+%
+\begin{align}
+	\sigma_k^2 = \frac{\sigma^2 \tau}{1-(1-b \tau)^2} \left [ 1-(1-b\tau)^{2k} \right] + \sigma_0^2 (1-b \tau)^{2k}
+\end{align}
+%
 \begin{figure}[tbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \includegraphics[width=.45\textwidth,trim=0 380 0 200,clip]{img1.pdf}
