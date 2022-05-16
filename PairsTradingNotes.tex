@@ -77,6 +77,13 @@ and
 	\sigma_k^2 = \frac{\sigma^2 \tau}{1-(1-b \tau)^2} \left [ 1-(1-b\tau)^{2k} \right] + \sigma_0^2 (1-b \tau)^{2k}
 \end{align}
 %
+We can also express the mean reversion condition in the form
+%
+\begin{align}
+	x_{k+1} = A + B x_k + C \varepsilon_{k+1},
+\end{align}
+%
+where $A = a \tau \geq 0, 0 < B = 1- b \tau$ and $C = \sigma \sqrt{\tau}$.
 \begin{figure}[tbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \includegraphics[width=.45\textwidth,trim=0 380 0 200,clip]{img1.pdf}
